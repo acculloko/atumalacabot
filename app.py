@@ -3,6 +3,8 @@ from nextcord import Intents
 from nextcord.ext import commands
 import requests
 
+token = json.load(open("config.json"))
+
 intents = Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='', intents=intents)
@@ -16,4 +18,4 @@ async def on_ready():
     print(f"logged in as: {bot.user.name}")
 
 if __name__ == '__main__':
-    bot.run("MTEyNDc1ODkzNTE1MzQyMjQxNw.Gm6n7b.K19SipkL8ZCy6mdR5Gk64iHdrYlXv1kpWVc1Bs")
+    bot.run(token)
