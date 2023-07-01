@@ -3,7 +3,8 @@ from nextcord import Intents
 from nextcord.ext import commands
 import requests, json
 
-token = json.load(open("config.json"))
+tokendict = json.load(open("config.json"))
+token = tokendict['token']
 
 intents = Intents.default()
 intents.message_content = True
