@@ -1,7 +1,7 @@
 import nextcord
 from nextcord import Intents
 from nextcord.ext import commands
-import requests
+import requests, json
 
 token = json.load(open("config.json"))
 
